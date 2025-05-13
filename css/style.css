@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poetsen+One&display=swap');
+*{
+    font-family: Poetsen One;
+    margin: 1;
+    padding: 1;
+    box-sizing: 1;
+}
+.titulo{
+    display: inline-block;
+    position: fixed;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    font-size: 100px;
+    margin: 10rem;
+}
+.navbar {
+    display: inline-block; 
+    text-align: center;
+    list-style: none;
+    border: 20%;
+    line-height: 100px;
+     
+}
+li {
+    display: inline-block;
+    margin: 16px;
+    text-align: center;
+}
+.redes{
+    display: grid;
+    place-items: stretch;
+    text-align: center;
+    text-decoration: underline blueviolet;
+    font-size: 32px;
+    justify-items: center;
+}
+.wpp{
+    background-color: green;
+    font-size: 20px;
+}
+.fb {
+    background-color: skyblue;
+    font-size: 20px;
+    
+}
+.ig{
+ font-size: 20px;
+ background-color: blueviolet;
+}
+@media (max-width: 768px) {
+.titulo{
+    font-size: 10px;
+}
+.imagen1{
+    margin: 0;
+    border: 5px;
+}
+  }
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .titulo {font-size: 50px;}
+
+
+}
+  
+@media (min-width: 1025px) {
+.titulo { font-size: 100px;}
+
+
+  }
