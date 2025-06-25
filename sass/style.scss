@@ -1,3 +1,11 @@
+// Variables
+$bg-color: rgba(0, 0, 0, 0.6);
+$text-color: #fff;
+$primary-color: #ffd60a;
+$hover-color: #219ebc;
+$shadow: 1px 1px #000;
+
+// Reset
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +14,7 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #fff;
+  color: $text-color;
   background: url('../assets/Logo (1).jpg') no-repeat center center fixed;
   background-size: cover;
   backdrop-filter: brightness(0.6);
@@ -15,22 +23,22 @@ body {
 header {
   text-align: center;
   padding: 2rem;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: $bg-color;
   animation: fadeInDown 1s ease-in-out;
   position: relative;
-}
 
-.titulo {
-  font-size: 2.5rem;
-  color: #8ecae6;
-  text-shadow: 2px 2px #000;
-}
+  .titulo {
+    font-size: 2.5rem;
+    color: lighten($hover-color, 20%);
+    text-shadow: 2px 2px $shadow;
+  }
 
-.subtitulo {
-  font-size: 1.5rem;
-  color: #f0f0f0;
-  margin-top: 0.5rem;
-  text-shadow: 1px 1px #000;
+  .subtitulo {
+    font-size: 1.5rem;
+    color: #f0f0f0;
+    margin-top: 0.5rem;
+    text-shadow: $shadow;
+  }
 }
 
 .navbar {
@@ -39,33 +47,33 @@ header {
   flex-wrap: wrap;
   gap: 1rem;
   margin-top: 1rem;
-}
 
-.navbar li {
-  list-style: none;
-}
+  li {
+    list-style: none;
+  }
 
-.navbar a {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-  color: #ffffff;
-  padding: 0.5rem 1rem;
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 8px;
-  transition: transform 0.3s, background-color 0.3s;
-}
+  a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: $text-color;
+    padding: 0.5rem 1rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    transition: transform 0.3s, background-color 0.3s;
 
-.navbar a:hover {
-  background-color: #219ebc;
-  transform: scale(1.1);
-}
+    &:hover {
+      background-color: $hover-color;
+      transform: scale(1.1);
+    }
+  }
 
-.navbar img {
-  width: 20px;
-  height: auto;
-  filter: brightness(0) invert(1);
+  img {
+    width: 20px;
+    height: auto;
+    filter: brightness(0) invert(1);
+  }
 }
 
 main {
@@ -73,27 +81,27 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   padding: 2rem;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: $bg-color;
   animation: fadeInUp 1s ease-in-out;
-}
 
-section, article {
-  padding: 1rem;
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  backdrop-filter: blur(3px);
-  transition: transform 0.5s;
-}
+  section, article {
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    backdrop-filter: blur(3px);
+    transition: transform 0.5s;
 
-section:hover, article:hover {
-  transform: rotateY(3deg) scale(1.02);
+    &:hover {
+      transform: rotateY(3deg) scale(1.02);
+    }
+  }
 }
 
 h2, h3 {
-  color: #ffd60a;
+  color: $primary-color;
   margin-bottom: 0.5rem;
-  text-shadow: 1px 1px #000;
+  text-shadow: $shadow;
 }
 
 p {
@@ -108,7 +116,7 @@ footer {
   color: #ccc;
 }
 
-/* Animaciones */
+// Animaciones
 @keyframes fadeInDown {
   from {
     transform: translateY(-20px);
@@ -130,8 +138,10 @@ footer {
     opacity: 1;
   }
 }
+
+// Responsive
 @media screen and (max-width: 768px) {
-  .titulo {
+  header .titulo {
     font-size: 2rem;
   }
 

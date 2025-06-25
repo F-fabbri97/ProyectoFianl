@@ -5,11 +5,12 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #fff;
-  background: url('../assets/Logo (1).jpg') no-repeat center center fixed;
+  background: url("../assets/Logo (1).jpg") no-repeat center center fixed;
   background-size: cover;
-  backdrop-filter: brightness(0.6);
+  -webkit-backdrop-filter: brightness(0.6);
+          backdrop-filter: brightness(0.6);
 }
 
 header {
@@ -19,14 +20,12 @@ header {
   animation: fadeInDown 1s ease-in-out;
   position: relative;
 }
-
-.titulo {
+header .titulo {
   font-size: 2.5rem;
-  color: #8ecae6;
-  text-shadow: 2px 2px #000;
+  color: #60cae3;
+  text-shadow: 2px 2px 1px 1px #000;
 }
-
-.subtitulo {
+header .subtitulo {
   font-size: 1.5rem;
   color: #f0f0f0;
   margin-top: 0.5rem;
@@ -40,28 +39,24 @@ header {
   gap: 1rem;
   margin-top: 1rem;
 }
-
 .navbar li {
   list-style: none;
 }
-
 .navbar a {
   display: flex;
   align-items: center;
   gap: 8px;
   text-decoration: none;
-  color: #ffffff;
+  color: #fff;
   padding: 0.5rem 1rem;
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 8px;
   transition: transform 0.3s, background-color 0.3s;
 }
-
 .navbar a:hover {
   background-color: #219ebc;
   transform: scale(1.1);
 }
-
 .navbar img {
   width: 20px;
   height: auto;
@@ -76,17 +71,16 @@ main {
   background-color: rgba(0, 0, 0, 0.6);
   animation: fadeInUp 1s ease-in-out;
 }
-
-section, article {
+main section, main article {
   padding: 1rem;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  backdrop-filter: blur(3px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
   transition: transform 0.5s;
 }
-
-section:hover, article:hover {
+main section:hover, main article:hover {
   transform: rotateY(3deg) scale(1.02);
 }
 
@@ -108,7 +102,6 @@ footer {
   color: #ccc;
 }
 
-/* Animaciones */
 @keyframes fadeInDown {
   from {
     transform: translateY(-20px);
@@ -119,7 +112,6 @@ footer {
     opacity: 1;
   }
 }
-
 @keyframes fadeInUp {
   from {
     transform: translateY(20px);
@@ -131,26 +123,22 @@ footer {
   }
 }
 @media screen and (max-width: 768px) {
-  .titulo {
+  header .titulo {
     font-size: 2rem;
   }
-
   .navbar {
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
   }
-
   main {
     grid-template-columns: 1fr;
     padding: 1rem;
   }
-
   section, article {
     padding: 0.5rem;
   }
-
   p {
     font-size: 0.95rem;
   }
-}
+}/*# sourceMappingURL=style.css.map */
