@@ -100,12 +100,29 @@ p {
   color: #e0e0e0;
   line-height: 1.6;
 }
-
+.card-body{
+  background-color: red;
+}
 footer {
   text-align: center;
   padding: 1rem;
   background-color: rgba(0, 0, 0, 0.8);
   color: #ccc;
+}
+/* —————————————————————— */
+/* Texto global en blanco  */
+/* —————————————————————— */
+body,
+body * {
+  /* Aplica color blanco a todo elemento */
+  color: #ffffff !important;
+}
+
+/* —————————————————————— */
+/* Títulos en amarillo      */
+/* —————————————————————— */
+h1, h2, h3, h4, h5, h6 {
+  color: #ffd60a !important;
 }
 
 /* Animaciones */
